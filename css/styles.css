@@ -6,14 +6,281 @@
 /* Feel free to add as many of these imports as you need */
 
 body {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+  background: #F1F1E6;
 }
 
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
+/* Hero Section */
+
+.hero-section {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image { 
+  position: absolute;
+  top:4%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.hero-section:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(193, 250, 255, 0.3);
+  z-index:99;
+}
+
+.hero-logo {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  top: 25px;
+  z-index:999;
+}
+
+/* Hook Section */
+
+.hook-section {
+  width: 600px;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+  "image"
+  "text"
+  "cta"
+  ;
+}
+
+.hook-image{grid-area: image;}
+.hook-text{grid-area: text;}
+.hook-cta{grid-area: cta;}
+
+.hook-image {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  top: 25px;
+}
+
+.hook-text {
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  font-size: 2.25em;
+  color:#0A3641;
   text-align: center;
+}
+
+.cta-button-wrapper {
+  display: block;
+  text-align: center;
+}
+
+.hook-cta {
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  font-size: 2.25em;
+  border: none;
+  border-radius: 1em;
+  display: inline-block;
+  text-align: center;
+  padding: 1em 2em;
+  width: 500px;
+}
+
+.hook-cta {
+  background-color:#F89235;
+  color:#F1F1E6;
+}
+
+.hook-cta:hover {
+  background-color:#F1F1E6;
+  color:#F89235;
+  border-radius: 1em;
+  border-color: #F89235;
+}
+
+/* Navigation Bar */
+
+header {
+  width: 100%;
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  font-size: 2.25em;
+  padding: 25px;
+  background: #0A3641;
+  color:#F1F1E6;
+}
+
+nav,
+#menu-checkbox {
+  display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+  display: block;
+}
+
+nav {
+  position: absolute;
+  background: #0A3641;
+  left: 0px;
+  z-index:9999;
+}
+
+.hamburger-icon {
+  display: block;
+  right: 25px;
+  top: 25px;
+}
+
+.hamburger-icon:hover {
+  color:#F89235;
+}
+
+#shopping-cart {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  color:#F1F1E6;
+}
+
+.nav-logo {
+  display: none;
+}
+
+nav a {
+  display: block;
+  padding: 50px 50px;
+}
+
+#shopping-cart:hover {
+  color:#F89235;
+}
+
+a:link {
+  text-decoration: none;
+  color:#F1F1E6;
+}
+
+a:visited {
+  color:#F1F1E6;
+}
+
+a:hover {
+  color: #F89235;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  margin-bottom: -20px;
+  background: #0A3641;
+  color: #F1F1E6;
+}
+
+#facebook:hover,
+#instagram:hover,
+#youtube:hover {
+  color:#F89235;
+}
+
+ul.footer-icons {
+  list-style-type: none;
+  text-align: center;
+}
+
+li {
+  font-size: 2.25em;
+  padding: 25px 25px;
+  display: inline-block;
+}
+
+/* DESKTOP VIEW */
+
+@media (min-width: 600px) {
+  
+/* Hero Section */
+
+  .hero-section {
+    width: 100%;
+    height: 500px;
+  }
+
+  .hero-image { 
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  .hero-logo {
+    width: 720px;
+    top: 50px;
+  }
+
+/* Navigation Bar */
+
+  nav {
+    display: block;
+    position: static;
+    text-align: center;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .nav-logo {
+    width: 160px;
+    display: block;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+  }
+
+  .nav-logo:hover {
+    content:url(/assets/images/logo/RainyDays_Logo-alt-small.png)
+  }
+
+  .home {
+    display: none;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 20px 150px;
+  }
+
+  header {
+    width: 100%;
+    font-size: 3.125em;
+  }
+
+  #shopping-cart {
+    padding: 20px;
+  }
+
+/* Footer */
+
+footer {
+  width: 100%;
+  margin-bottom: -20px;
+  background: #0A3641;
+  color: #F1F1E6;
+}
+
+  ul.footer-icons {
+    background: #0A3641;
+    color: #F1F1E6;
+  }
+  
+  li {
+    font-size: 3.125em;
+    padding: 25px 50px;
+  }
 }

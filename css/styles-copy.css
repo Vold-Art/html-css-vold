@@ -1,0 +1,156 @@
+/* Use import to split up your CSS into manageable chunks */
+@import url("./reset.css");
+/* Files that are only needed to be imported are called partials */
+/* These are marked with an underscore: */
+@import url("./variables.css");
+/* Feel free to add as many of these imports as you need */
+
+body {
+  background: #F1F1E6;
+}
+
+/* Navigation Bar */
+
+header {
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  font-size: 2.25em;
+  padding: 25px;
+  background: #0A3641;
+  color:#F1F1E6;
+}
+
+nav,
+#menu-checkbox {
+  display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+  display: block;
+}
+
+nav {
+  position: absolute;
+  background: #0A3641;
+  left: 0px;
+}
+
+.hamburger-icon {
+  display: block;
+  right: 50px;
+  top: 25px;
+}
+
+#shopping-cart {
+  position: absolute;
+  right: 50px;
+  top: 25px;
+  color:#F1F1E6;
+}
+
+.nav-logo {
+  display: none;
+}
+
+nav a {
+  display: block;
+  padding: 50px 50px;
+}
+
+#shopping-cart:hover {
+  color:#F89235;
+}
+
+a:link {
+  text-decoration: none;
+  color:#F1F1E6;
+}
+
+a:visited {
+  color:#F1F1E6;
+}
+
+a:hover {
+  color: #F89235;
+}
+
+/* Footer */
+
+footer {
+  background: #0A3641;
+  color: #F1F1E6;
+}
+
+#facebook:hover,
+#instagram:hover,
+#youtube:hover {
+  color:#F89235;
+}
+
+ul.footer-icons {
+  list-style-type: none;
+  text-align: center;
+}
+
+li {
+  font-size: 2.25em;
+  padding: 25px 25px;
+  display: inline-block;
+}
+
+/* DESKTOP VIEW */
+
+/* Navigation Bar */
+
+@media (min-width: 600px) {
+  nav {
+    display: block;
+    position: static;
+    text-align: center;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .nav-logo {
+    width: 160px;
+    display: block;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+  }
+
+  .nav-logo:hover {
+    content:url(/assets/images/logo/RainyDays_Logo-alt-small.png)
+  }
+
+  .home {
+    display: none;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 20px 100px;
+  }
+
+  header {
+    font-size: 3.125em;
+  }
+
+  #shopping-cart {
+    padding: 20px;
+  }
+
+/* Footer */
+
+  ul.footer-icons {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  li {
+    font-size: 3.125em;
+    padding: 25px 50px;
+    display: inline-block;
+  }
+}
