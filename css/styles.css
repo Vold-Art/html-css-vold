@@ -51,7 +51,6 @@ body {
 .hook-section {
   width: 100%;
   display: grid;
-  grid-gap: 1em;
   grid-template-areas:
   "image"
   "text"
@@ -59,60 +58,59 @@ body {
   ;
 }
 
-.hook-image{grid-area: image;}
+.hook-image-container{grid-area: image;}
 .hook-text{grid-area: text;}
 .hook-cta{grid-area: cta;}
 
-.hook-image {
+.hook-image-container {
+  width: 90%;
+  height: 400px;
+  overflow: hidden;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1em auto;
+  border-radius: 15px;
+}
+
+.hook-image { 
+  position: absolute;
   object-fit: cover;
-  transform: scale(1.0); 
-  object-position: 50% 40%;
-  height: auto;
-  max-width: 100%;
-  padding: 1em;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
 }
 
 .hook-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 500px;
+  display: block;
+  text-align: center;
+  padding: 1em 1em;
+  margin: auto auto;
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   font-size: 2.25em;
+  line-height: 50px;
+  font-weight: 400;
   color:#0A3641;
   text-align: center;
 }
 
-.cta-button-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .hook-cta {
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   font-size: 2.25em;
-  border: none;
-  border-radius: 1em;
-  display: inline-block;
-  text-align: center;
-  padding: 1em 2em;
-  width: 100%;
-  max-width: 400px;
-}
-
-.hook-cta {
   background-color:#F89235;
   color:#F1F1E6;
+  border: none;
+  border-radius: 1em;
+  display: block;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  max-width: 400px;
+  margin: auto auto;
 }
 
 .hook-cta:hover {
   background-color:#F1F1E6;
   color:#F89235;
-  border-radius: 1em;
-  border-color: #F89235;
 }
 
 /* Navigation Bar */
@@ -236,7 +234,7 @@ li {
   .hook-section {
     width: 100%;
     display: grid;
-    grid-gap: 1em;
+    grid-gap: 0em;
     grid-template-areas:
     "image text"
     "image cta"
@@ -247,8 +245,21 @@ li {
   .hook-text{grid-area: text;}
   .hook-cta{grid-area: cta;}
 
+  .hook-image-container {
+    height: 608px;
+    border-radius: 30px;
+  }
+  
+  .hook-image { 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+
   .hook-text {
     font-size: 3.125em;
+    max-width: 750px;
+    line-height: 100px;
   }
 
 /* Navigation Bar */
