@@ -186,25 +186,19 @@ body {
 
 .splash-jacket {
 	grid-area: jacket;
+  max-height: 200px;
+	margin: auto auto;
 }
 .splash-text {
 	grid-area: text;
-}
-
-.splash-jacket {
-	max-height: 200px;
-	margin: auto auto;
-}
-
-.splash-text {
-	height: 200px;
+  height: 200px;
 	display: block;
 	text-align: center;
 	margin: auto auto;
-	color: #f89235;
 }
 
-.splash-text-1 {
+.splash-text-1,
+.splash-text-2 {
 	font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
 	font-size: 1.8em;
 	line-height: 50px;
@@ -447,7 +441,8 @@ li {
 		height: 425px;
 	}
 
-	.splash-text-1 {
+	.splash-text-1,
+  .splash-text-2 {
 		font-size: 4.5em;
 		margin: 1.5em auto;
 	}

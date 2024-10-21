@@ -52,7 +52,12 @@ body {
 		"price";
 }
 
-.product-image {
+.product-image-1,
+.product-image-2,
+.product-image-3,
+.product-image-4,
+.product-image-5,
+.product-image-6 {
 	grid-area: jacket;
 	max-width: 100%;
 	margin: auto auto;
@@ -82,6 +87,30 @@ body {
 	text-align: left;
 	width: 50%;
 	margin: auto auto;
+}
+
+.product-image-1:hover {
+	content: url(/assets/images/products/RainyDays\ 1-2.png);
+}
+
+.product-image-2:hover {
+	content: url(/assets/images/products/RainyDays\ 2-2.png);
+}
+
+.product-image-3:hover {
+	content: url(/assets/images/products/RainyDays\ 3-2.png);
+}
+
+.product-image-4:hover {
+	content: url(/assets/images/products/RainyDays\ 4-2.png);
+}
+
+.product-image-5:hover {
+	content: url(/assets/images/products/RainyDays\ 5-2.png);
+}
+
+.product-image-6:hover {
+	content: url(/assets/images/products/RainyDays\ 6-2.png);
 }
 
 /* Bottom Section */
