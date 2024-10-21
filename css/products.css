@@ -221,6 +221,7 @@ li {
 /* DESKTOP VIEW */
 
 @media (min-width: 1024px) {
+	
 	.page-text {
 		font-size: 3.125em;
 	}
