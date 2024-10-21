@@ -1,0 +1,333 @@
+/* Use import to split up your CSS into manageable chunks */
+@import url("./reset.css");
+/* Files that are only needed to be imported are called partials */
+/* These are marked with an underscore: */
+@import url("./variables.css");
+/* Feel free to add as many of these imports as you need */
+
+body {
+	background: #f1f1e6;
+	margin: 0;
+	padding: 0;
+}
+
+.page-text {
+	font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+	font-size: 2.25em;
+	color: #0a3641;
+	padding: 0.5em 1em 0.5em 1em;
+    margin: 0em;
+}
+
+/* Product Section */
+
+.product-section {
+	display: grid;
+	padding: 1em 0em 1em 0em;
+	position: relative;
+	margin: auto auto;
+	grid-template-areas:
+		"product-1"
+		"product-2"
+		"product-3";
+}
+
+.product-1 {
+	grid-area: product-1;
+}
+.product-2 {
+	grid-area: product-2;
+}
+.product-3 {
+	grid-area: product-3;
+}
+
+.product-1 .product-2 .product-3 {
+	display: grid;
+	position: relative;
+	margin: auto auto;
+	grid-template-areas:
+		"jacket"
+		"name"
+		"price";
+}
+
+.product-image {
+	grid-area: jacket;
+	max-width: 100%;
+	margin: auto auto;
+}
+
+.product-name {
+	grid-area: name;
+	color: #0a3641;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 300;
+	line-height: 28px;
+	display: block;
+	text-align: left;
+	width: 50%;
+	margin: auto auto;
+}
+
+.product-price {
+	grid-area: price;
+	color: #0a3641;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 28px;
+	display: block;
+	text-align: left;
+	width: 50%;
+	margin: auto auto;
+}
+
+/* Bottom Section */
+
+.bottom-section {
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	position: relative;
+}
+
+.bottom-image {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -35%) scale(0.7);
+}
+
+.bottom-section:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(193, 250, 255, 0.2);
+	z-index: 99;
+}
+
+/* Navigation Bar */
+
+header {
+	width: 100%;
+	font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+	font-size: 2.25em;
+	padding: 25px;
+	background: #0a3641;
+	color: #f1f1e6;
+}
+
+nav,
+#menu-checkbox {
+	display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+	display: block;
+}
+
+nav {
+	position: absolute;
+	background: #0a3641;
+	left: 0px;
+	z-index: 9999;
+}
+
+.hamburger-icon {
+	display: block;
+	right: 25px;
+	top: 25px;
+}
+
+.hamburger-icon:hover {
+	color: #f89235;
+}
+
+#shopping-cart {
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	color: #f1f1e6;
+}
+
+.nav-logo {
+	display: none;
+}
+
+nav a {
+	display: block;
+	padding: 50px 50px;
+}
+
+#shopping-cart:hover {
+	color: #f89235;
+}
+
+a:link {
+	text-decoration: none;
+	color: #f1f1e6;
+}
+
+a:visited {
+	color: #f1f1e6;
+}
+
+a:hover {
+	color: #f89235;
+}
+
+/* Footer */
+
+footer {
+	width: 100%;
+	margin-bottom: -20px;
+	background: #0a3641;
+	color: #f1f1e6;
+}
+
+#facebook:hover,
+#instagram:hover,
+#youtube:hover {
+	color: #f89235;
+}
+
+ul.footer-icons {
+	margin-top: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+li {
+	font-size: 2.25em;
+	padding: 25px 25px;
+	display: inline-block;
+}
+
+.bottom-logo {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 360px;
+	height: auto;
+	top: 25px;
+	z-index: 999;
+}
+
+/* DESKTOP VIEW */
+
+@media (min-width: 1024px) {
+	.page-text {
+		font-size: 3.125em;
+	}
+
+	/* Product Section */
+
+	.product-section {
+		display: grid;
+		grid-template-columns: 33.33% 33.33% 33.33%;
+		position: relative;
+		margin: auto auto;
+		grid-template-areas: "product-1 product-2 product-3";
+	}
+
+	.product-1 {
+		grid-area: product-1;
+	}
+	.product-2 {
+		grid-area: product-2;
+	}
+	.product-3 {
+		grid-area: product-3;
+	}
+
+	.product-name {
+		font-size: 1.5em;
+	}
+
+	.product-price {
+		font-size: 1.5em;
+		padding: 1em 0em 1em 0em;
+	}
+
+    /* Bottom Section */
+
+	.bottom-section {
+		width: 100%;
+		height: 500px;
+	}
+
+	.bottom-image {
+		transform: translate(-50%, -25%) scale(1.3);
+	}
+
+	.bottom-logo {
+		max-width: 720px;
+		top: 50px;
+	}
+
+	/* Navigation Bar */
+
+	nav {
+		display: block;
+		position: static;
+		text-align: center;
+	}
+
+	.hamburger-icon {
+		display: none;
+	}
+
+	.nav-logo {
+		width: 160px;
+		display: block;
+		position: absolute;
+		left: 50px;
+		top: 40px;
+	}
+
+	.nav-logo:hover {
+		content: url(/assets/images/logo/RainyDays_Logo-alt-small.png);
+	}
+
+	.home {
+		display: none;
+	}
+
+	nav a {
+		display: inline-block;
+		padding: 20px 150px;
+	}
+
+	header {
+		width: 100%;
+		font-size: 3.125em;
+	}
+
+	#shopping-cart {
+		padding: 20px;
+	}
+
+	/* Footer */
+
+	footer {
+		width: 100%;
+
+		background: #0a3641;
+		color: #f1f1e6;
+	}
+
+	ul.footer-icons {
+		background: #0a3641;
+		color: #f1f1e6;
+	}
+
+	li {
+		font-size: 3.125em;
+		padding: 25px 50px;
+	}
+}
