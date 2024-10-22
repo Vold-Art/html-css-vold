@@ -487,7 +487,7 @@ li {
 	}
 
 	.nav-logo:hover {
-		content: url(/assets/images/logo/RainyDays_Logo-alt-small.png);
+		content: url(./assets/images/logo/RainyDays_Logo-alt-small.png);
 	}
 
 	.home {
