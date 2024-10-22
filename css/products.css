@@ -16,7 +16,7 @@ body {
 	font-size: 2.25em;
 	color: #0a3641;
 	padding: 0.5em 1em 0.5em 1em;
-    margin: 0em;
+	margin: 0em;
 }
 
 /* Product Section */
@@ -35,9 +35,11 @@ body {
 .product-1 {
 	grid-area: product-1;
 }
+
 .product-2 {
 	grid-area: product-2;
 }
+
 .product-3 {
 	grid-area: product-3;
 }
@@ -154,7 +156,7 @@ nav,
 	display: none;
 }
 
-#menu-checkbox:checked ~ nav {
+#menu-checkbox:checked~nav {
 	display: block;
 }
 
@@ -250,7 +252,7 @@ li {
 /* DESKTOP VIEW */
 
 @media (min-width: 1024px) {
-	
+
 	.page-text {
 		font-size: 3.125em;
 	}
@@ -268,9 +270,11 @@ li {
 	.product-1 {
 		grid-area: product-1;
 	}
+
 	.product-2 {
 		grid-area: product-2;
 	}
+
 	.product-3 {
 		grid-area: product-3;
 	}
@@ -284,7 +288,7 @@ li {
 		padding: 1em 0em 1em 0em;
 	}
 
-    /* Bottom Section */
+	/* Bottom Section */
 
 	.bottom-section {
 		width: 100%;

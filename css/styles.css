@@ -63,9 +63,11 @@ body {
 .hook-image-container {
 	grid-area: image;
 }
+
 .hook-text {
 	grid-area: text;
 }
+
 .hook-cta {
 	grid-area: cta;
 }
@@ -186,12 +188,13 @@ body {
 
 .splash-jacket {
 	grid-area: jacket;
-  max-height: 200px;
+	max-height: 200px;
 	margin: auto auto;
 }
+
 .splash-text {
 	grid-area: text;
-  height: 200px;
+	height: 200px;
 	display: block;
 	text-align: center;
 	margin: auto auto;
@@ -261,7 +264,7 @@ nav,
 	display: none;
 }
 
-#menu-checkbox:checked ~ nav {
+#menu-checkbox:checked~nav {
 	display: block;
 }
 
@@ -442,7 +445,7 @@ li {
 	}
 
 	.splash-text-1,
-  .splash-text-2 {
+	.splash-text-2 {
 		font-size: 4.5em;
 		margin: 1.5em auto;
 	}
