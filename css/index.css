@@ -1,9 +1,6 @@
-/* Use import to split up your CSS into manageable chunks */
-@import url("./reset.css");
-/* Files that are only needed to be imported are called partials */
-/* These are marked with an underscore: */
-@import url("./variables.css");
-/* Feel free to add as many of these imports as you need */
+@import url("../css/reset.css");
+
+@import url("../css/variables.css");
 
 body {
 	background: #f1f1e6;
@@ -58,21 +55,11 @@ body {
 		"image"
 		"text"
 		"cta";
+	align-items: center;
 }
 
 .hook-image-container {
 	grid-area: image;
-}
-
-.hook-text {
-	grid-area: text;
-}
-
-.hook-cta {
-	grid-area: cta;
-}
-
-.hook-image-container {
 	width: 90%;
 	height: 400px;
 	overflow: hidden;
@@ -90,6 +77,7 @@ body {
 }
 
 .hook-text {
+	grid-area: text;
 	max-width: 90%;
 	padding-bottom: 25px;
 	display: block;
@@ -104,6 +92,7 @@ body {
 }
 
 .hook-cta {
+	grid-area: cta;
 	font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
 	font-size: 2.25em;
 	background-color: #f89235;
@@ -178,11 +167,12 @@ body {
 	position: relative;
 	transform: translate(-0%, -107%) scale(1);
 	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
 	margin: auto auto;
 	gap: 0px;
 	grid-template-areas:
-		"jacket text"
-		"jacket text";
+		"jacket text-1"
+		"jacket text-2";
 	z-index: 999;
 }
 
@@ -192,12 +182,16 @@ body {
 	margin: auto auto;
 }
 
-.splash-text {
-	grid-area: text;
-	height: 200px;
+.splash-text-1 {
+	grid-area: text-1;
 	display: block;
-	text-align: center;
-	margin: auto auto;
+	max-width: 80%;
+}
+
+.splash-text-2 {
+	grid-area: text-2;
+	display: block;
+	max-width: 80%;
 }
 
 .splash-text-1,
@@ -207,8 +201,8 @@ body {
 	line-height: 50px;
 	font-weight: 400;
 	color: #f89235;
-	margin: 1em auto;
 	text-align: center;
+	margin: auto auto;
 }
 
 /* Bottom Section */
@@ -246,103 +240,6 @@ body {
 	height: auto;
 	top: 25px;
 	z-index: 999;
-}
-
-/* Navigation Bar */
-
-header {
-	width: 100%;
-	font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-	font-size: 2.25em;
-	padding: 25px;
-	background: #0a3641;
-	color: #f1f1e6;
-}
-
-nav,
-#menu-checkbox {
-	display: none;
-}
-
-#menu-checkbox:checked~nav {
-	display: block;
-}
-
-nav {
-	position: absolute;
-	background: #0a3641;
-	left: 0px;
-	z-index: 9999;
-}
-
-.hamburger-icon {
-	display: block;
-	right: 25px;
-	top: 25px;
-}
-
-.hamburger-icon:hover {
-	color: #f89235;
-}
-
-#shopping-cart {
-	position: absolute;
-	right: 25px;
-	top: 25px;
-	color: #f1f1e6;
-}
-
-.nav-logo {
-	display: none;
-}
-
-nav a {
-	display: block;
-	padding: 50px 50px;
-}
-
-#shopping-cart:hover {
-	color: #f89235;
-}
-
-a:link {
-	text-decoration: none;
-	color: #f1f1e6;
-}
-
-a:visited {
-	color: #f1f1e6;
-}
-
-a:hover {
-	color: #f89235;
-}
-
-/* Footer */
-
-footer {
-	width: 100%;
-	margin-bottom: -20px;
-	background: #0a3641;
-	color: #f1f1e6;
-}
-
-#facebook:hover,
-#instagram:hover,
-#youtube:hover {
-	color: #f89235;
-}
-
-ul.footer-icons {
-	margin-top: 0;
-	list-style-type: none;
-	text-align: center;
-}
-
-li {
-	font-size: 2.25em;
-	padding: 25px 25px;
-	display: inline-block;
 }
 
 /* DESKTOP VIEW */
@@ -433,21 +330,16 @@ li {
 		max-width: 1556px;
 		max-height: 425px;
 		transform: translate(-0%, -104%) scale(1);
-		grid-template-columns: 50% 50%;
 	}
 
 	.splash-jacket {
 		max-height: 425px;
 	}
 
-	.splash-text {
-		height: 425px;
-	}
-
 	.splash-text-1,
 	.splash-text-2 {
 		font-size: 4.5em;
-		margin: 1.5em auto;
+		line-height: 100px;
 	}
 
 	/* Bottom Section */
@@ -464,66 +356,5 @@ li {
 	.bottom-logo {
 		max-width: 720px;
 		top: 50px;
-	}
-
-	/* Navigation Bar */
-
-	nav {
-		display: block;
-		position: static;
-		text-align: center;
-	}
-
-	.hamburger-icon {
-		display: none;
-	}
-
-	.nav-logo {
-		width: 160px;
-		display: block;
-		position: absolute;
-		left: 50px;
-		top: 40px;
-	}
-
-	.nav-logo:hover {
-		content: url(../assets/images/logo/RainyDays_Logo-alt-small.png);
-	}
-
-	.home {
-		display: none;
-	}
-
-	nav a {
-		display: inline-block;
-		padding: 20px 150px;
-	}
-
-	header {
-		width: 100%;
-		font-size: 3.125em;
-	}
-
-	#shopping-cart {
-		padding: 20px;
-	}
-
-	/* Footer */
-
-	footer {
-		width: 100%;
-
-		background: #0a3641;
-		color: #f1f1e6;
-	}
-
-	ul.footer-icons {
-		background: #0a3641;
-		color: #f1f1e6;
-	}
-
-	li {
-		font-size: 3.125em;
-		padding: 25px 50px;
 	}
 }

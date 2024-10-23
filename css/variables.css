@@ -2,6 +2,7 @@
 /* This could be colors, fonts, or padding sizes! */
 
 :root {
-  --color-primary: #7be447;
-  --color-secondary: #1f1f1f;
+  --color-primary: #f1f1e6;
+  --color-secondary: #f89235;
+  --color-tertiery: #0a3641;
 }

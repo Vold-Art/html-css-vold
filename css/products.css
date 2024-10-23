@@ -1,9 +1,6 @@
-/* Use import to split up your CSS into manageable chunks */
-@import url("./reset.css");
-/* Files that are only needed to be imported are called partials */
-/* These are marked with an underscore: */
-@import url("./variables.css");
-/* Feel free to add as many of these imports as you need */
+@import url("../css/reset.css");
+
+@import url("../css/variables.css");
 
 body {
 	background: #f1f1e6;
@@ -140,115 +137,6 @@ body {
 	z-index: 99;
 }
 
-/* Navigation Bar */
-
-header {
-	width: 100%;
-	font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-	font-size: 2.25em;
-	padding: 25px;
-	background: #0a3641;
-	color: #f1f1e6;
-}
-
-nav,
-#menu-checkbox {
-	display: none;
-}
-
-#menu-checkbox:checked~nav {
-	display: block;
-}
-
-nav {
-	position: absolute;
-	background: #0a3641;
-	left: 0px;
-	z-index: 9999;
-}
-
-.hamburger-icon {
-	display: block;
-	right: 25px;
-	top: 25px;
-}
-
-.hamburger-icon:hover {
-	color: #f89235;
-}
-
-#shopping-cart {
-	position: absolute;
-	right: 25px;
-	top: 25px;
-	color: #f1f1e6;
-}
-
-.nav-logo {
-	display: none;
-}
-
-nav a {
-	display: block;
-	padding: 50px 50px;
-}
-
-#shopping-cart:hover {
-	color: #f89235;
-}
-
-a:link {
-	text-decoration: none;
-	color: #f1f1e6;
-}
-
-a:visited {
-	color: #f1f1e6;
-}
-
-a:hover {
-	color: #f89235;
-}
-
-/* Footer */
-
-footer {
-	width: 100%;
-	margin-bottom: -20px;
-	background: #0a3641;
-	color: #f1f1e6;
-}
-
-#facebook:hover,
-#instagram:hover,
-#youtube:hover {
-	color: #f89235;
-}
-
-ul.footer-icons {
-	margin-top: 0;
-	list-style-type: none;
-	text-align: center;
-}
-
-li {
-	font-size: 2.25em;
-	padding: 25px 25px;
-	display: inline-block;
-}
-
-.bottom-logo {
-	position: relative;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	max-width: 360px;
-	height: auto;
-	top: 25px;
-	z-index: 999;
-}
-
 /* DESKTOP VIEW */
 
 @media (min-width: 1024px) {
@@ -302,66 +190,5 @@ li {
 	.bottom-logo {
 		max-width: 720px;
 		top: 50px;
-	}
-
-	/* Navigation Bar */
-
-	nav {
-		display: block;
-		position: static;
-		text-align: center;
-	}
-
-	.hamburger-icon {
-		display: none;
-	}
-
-	.nav-logo {
-		width: 160px;
-		display: block;
-		position: absolute;
-		left: 50px;
-		top: 40px;
-	}
-
-	.nav-logo:hover {
-		content: url(../assets/images/logo/RainyDays_Logo-alt-small.png);
-	}
-
-	.home {
-		display: none;
-	}
-
-	nav a {
-		display: inline-block;
-		padding: 20px 150px;
-	}
-
-	header {
-		width: 100%;
-		font-size: 3.125em;
-	}
-
-	#shopping-cart {
-		padding: 20px;
-	}
-
-	/* Footer */
-
-	footer {
-		width: 100%;
-
-		background: #0a3641;
-		color: #f1f1e6;
-	}
-
-	ul.footer-icons {
-		background: #0a3641;
-		color: #f1f1e6;
-	}
-
-	li {
-		font-size: 3.125em;
-		padding: 25px 50px;
 	}
 }
