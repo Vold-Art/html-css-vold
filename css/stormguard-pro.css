@@ -1,0 +1,194 @@
+@import url("../css/reset.css");
+
+@import url("../css/variables.css");
+
+body {
+    background: #f1f1e6;
+    margin: 0;
+    padding: 0;
+}
+
+.page-text {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    color: #0a3641;
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0em;
+}
+
+/* StormGuard Pro Section */
+
+.product-section {
+    display: grid;
+    padding: 1em 0em 1em 0em;
+    position: relative;
+    margin: auto auto;
+    grid-template-areas:
+        "jacket"
+        "name"
+        "price"
+        "desc"
+        "sizes"
+        "cta";
+}
+
+.jacket-image {
+    grid-area: jacket;
+    max-width: 100%;
+    margin: auto auto;
+}
+
+.jacket-image:hover {
+    content: url(../assets/images/products/rainydays-1-2.png);
+}
+
+.name-text,
+.price-text,
+.desc-text {
+    color: #0a3641;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 32px;
+    display: block;
+    text-align: left;
+    width: 50%;
+    margin: auto auto;
+    padding-bottom: 1em;
+}
+
+.name-text {
+    grid-area: name;
+}
+
+.price-text {
+    grid-area: price;
+}
+
+.name-text,
+.price-text {
+    font-weight: 600;
+}
+
+.desc-text {
+    grid-area: desc;
+    font-weight: 300;
+}
+
+.size-buttons {
+    grid-area: sizes;
+    margin: auto auto;
+    padding-bottom: 1em;
+}
+
+.size-cta-1,
+.size-cta-2,
+.size-cta-3,
+.size-cta-4,
+.size-cta-5 {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    background-color: #f1f1e6;
+    color: #0a3641;
+    border-radius: 100%;
+    outline: 5px solid #0a3641;
+    text-decoration: none;
+    line-height: 46px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin: auto auto;
+}
+
+.size-cta-wrapper-1,
+.size-cta-wrapper-2,
+.size-cta-wrapper-3,
+.size-cta-wrapper-4,
+.size-cta-wrapper-5 {
+    border: none;
+    padding: 1em 0.5em 1em 0.5em;
+}
+
+.buy-cta {
+    grid-area: cta;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    background-color: #0a3641;
+    color: #f1f1e6;
+    border-radius: 15px;
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+    margin: auto auto 1em auto;
+}
+
+.buy-cta:hover {
+    background-color: #3E6571;
+    color: #f1f1e6;
+}
+
+.buy-cta:active {
+    background-color: #f1f1e6;
+    color: #0a3641;
+    outline: 5px solid #0a3641;
+    outline-offset: -5px;
+}
+
+/* DESKTOP VIEW */
+
+@media (min-width: 1024px) {
+
+    .page-text {
+        font-size: 3.125em;
+    }
+
+    .product-section {
+        max-width: 1556px;
+        grid-template-columns: 55% 45%;
+        padding-bottom: 2em;
+        grid-template-areas:
+            "jacket name"
+            "jacket price"
+            "jacket desc"
+            "jacket desc"
+            "jacket sizes"
+            "jacket cta";
+    }
+
+    .name-text,
+    .price-text,
+    .desc-text {
+        font-size: 1.5em;
+        line-height: 64px;
+        width: 75%;
+    }
+
+    .size-cta-1,
+    .size-cta-2,
+    .size-cta-3,
+    .size-cta-4,
+    .size-cta-5 {
+        font-size: 3.125em;
+        outline: 7.5px solid #0a3641;
+        width: 60px;
+        height: 60px;
+        margin: auto 0.2em auto auto;
+        line-height: 65px;
+    }
+
+    .buy-cta {
+        font-size: 3.125em;
+        border-radius: 30px;
+        max-width: 450px;
+        padding: 0.2em;
+        margin: auto auto 0.5em auto;
+    }
+
+    .buy-cta:active {
+        outline: 10px solid #0a3641;
+        outline-offset: -10px;
+    }
+
+}
