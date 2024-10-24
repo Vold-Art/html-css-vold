@@ -137,6 +137,18 @@ body {
 	z-index: 99;
 }
 
+.bottom-logo {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 360px;
+	height: auto;
+	top: 25px;
+	z-index: 999;
+}
+
 /* DESKTOP VIEW */
 
 @media (min-width: 1024px) {
