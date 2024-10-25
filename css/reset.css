@@ -97,6 +97,7 @@ ul.footer-icons {
   margin-top: 0;
   list-style-type: none;
   text-align: center;
+  padding-inline-start: 0px;
 }
 
 li {
