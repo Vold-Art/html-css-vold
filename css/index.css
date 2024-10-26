@@ -29,7 +29,7 @@ body {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background: rgba(193, 250, 255, 0.3);
+	background: rgba(62, 101, 113, 0.6);
 	z-index: 99;
 }
 
@@ -95,7 +95,7 @@ body {
 	grid-area: cta;
 	font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
 	font-size: 2.25em;
-	background-color: #f89235;
+	background-color: #ff7a00;
 	color: #f1f1e6;
 	border-radius: 15px;
 	display: block;
@@ -108,8 +108,8 @@ body {
 
 .hook-cta:hover {
 	background-color: #f1f1e6;
-	color: #f89235;
-	outline: 5px solid #f89235;
+	color: #ff7a00;
+	outline: 5px solid #ff7a00;
 	outline-offset: -5px;
 }
 
