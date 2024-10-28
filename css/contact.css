@@ -1,0 +1,152 @@
+@import url("../css/reset.css");
+
+@import url("../css/variables.css");
+
+body {
+    background: #f1f1e6;
+    margin: 0;
+    padding: 0;
+}
+
+.page-text,
+.checkout-header {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    color: #0a3641;
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0em;
+}
+
+/* Contact Section */
+
+.message-cta {
+    grid-area: cta;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    background-color: #0a3641;
+    color: #f1f1e6;
+    border-radius: 15px;
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+    margin: auto auto 0.5em auto;
+}
+
+.message-cta:hover {
+    background-color: #3E6571;
+    color: #f1f1e6;
+}
+
+.message-cta:active {
+    background-color: #f1f1e6;
+    color: #0a3641;
+    outline: 5px solid #0a3641;
+    outline-offset: -5px;
+}
+
+.contact-header,
+.contact-address,
+.contact-phone {
+    color: #0a3641;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 32px;
+    display: block;
+    text-align: left;
+    width: 50%;
+    margin: auto auto;
+    padding-bottom: 1em;
+}
+
+.contact-header {
+    font-weight: 600;
+}
+
+/* Bottom Section */
+
+.bottom-section {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bottom-image {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -45%) scale(0.7);
+}
+
+.bottom-section:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(248, 146, 53, 0.4);
+    z-index: 99;
+}
+
+.bottom-logo {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    top: 25px;
+    z-index: 999;
+}
+
+/* DESKTOP VIEW */
+
+@media (min-width: 1024px) {
+
+    .page-text {
+        font-size: 3.125em;
+    }
+
+    /* Contact Section */
+
+    .message-cta {
+        font-size: 3.125em;
+        border-radius: 30px;
+        max-width: 450px;
+        padding: 0.2em;
+        margin: auto auto auto auto;
+    }
+
+    .message-cta:active {
+        outline: 10px solid #0a3641;
+        outline-offset: -10px;
+    }
+
+    .contact-header,
+    .contact-address,
+    .contact-phone {
+        font-size: 1.5em;
+        line-height: 64px;
+        width: 75%;
+    }
+
+    /* Bottom Section */
+
+    .bottom-section {
+        width: 100%;
+        height: 500px;
+    }
+
+    .bottom-image {
+        transform: translate(-50%, -40%) scale(1.3);
+    }
+
+    .bottom-logo {
+        max-width: 720px;
+        top: 50px;
+    }
+
+}
