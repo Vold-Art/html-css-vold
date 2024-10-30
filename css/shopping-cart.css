@@ -1,0 +1,311 @@
+@import url("../css/reset.css");
+
+@import url("../css/variables.css");
+
+body {
+    background: #f1f1e6;
+    margin: 0;
+    padding: 0;
+}
+
+.page-text {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    color: #0a3641;
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0em;
+}
+
+/* Cart Section */
+
+.cart-section {
+    display: grid;
+    position: relative;
+    margin: auto auto;
+    grid-template-columns: 50% 50%;
+    max-width: 90%;
+    border: 5px solid #3E6571;
+    border-radius: 15px;
+    grid-template-areas:
+        "jacket text-1"
+        "jacket text-2"
+        "jacket text-3";
+}
+
+.jacket-image {
+    grid-area: jacket;
+    max-width: 100%;
+    margin: auto auto;
+}
+
+.jacket-text,
+.size-text,
+.price-text {
+    color: #0a3641;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: right;
+    margin: 2em;
+}
+
+.jacket-text {
+    grid-area: text-1;
+}
+
+.size-text {
+    grid-area: text-2;
+}
+
+.price-text {
+    grid-area: text-3;
+}
+
+/* Summary Banner */
+
+.divider {
+    padding: 1em;
+}
+
+.summary-banner {
+    background-color: #3E6571;
+    border-radius: 15px;
+    max-width: 90%;
+    margin: auto;
+    padding: 0em;
+    display: grid;
+    grid-template-areas:
+        "total price";
+}
+
+h2 {
+    color: #f1f1e6;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.total-summary {
+    grid-area: total;
+    text-align: left;
+    margin-left: 1em;
+}
+
+.price-summary {
+    grid-area: price;
+    text-align: right;
+    margin-right: 1em;
+}
+
+/* Input Section */
+
+.input-section {
+    max-width: 90%;
+    border: 5px solid #3E6571;
+    border-radius: 15px;
+    margin: auto;
+    display: grid;
+    position: relative;
+    grid-template-areas:
+        "first sur"
+        "mail mail"
+        "address address"
+        "postal city"
+        "card card"
+        "expiry cvc";
+}
+
+.first {
+    grid-area: first;
+}
+
+.sur {
+    grid-area: sur;
+}
+
+.mail {
+    grid-area: mail;
+}
+
+.address {
+    grid-area: address;
+}
+
+.postal {
+    grid-area: postal;
+}
+
+.city {
+    grid-area: city;
+}
+
+.card {
+    grid-area: card;
+}
+
+.expiry {
+    grid-area: expiry;
+}
+
+.cvc {
+    grid-area: cvc;
+}
+
+fieldset {
+    padding: 0 10px 10px;
+    border: 5px solid #3E6571;
+    border-radius: 15px;
+    margin: 1em;
+}
+
+legend {
+    color: #3E6571;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+#input-first,
+#input-sur,
+#input-mail,
+#input-address,
+#input-postal,
+#input-city,
+#input-card,
+#input-expiry,
+#input-cvc {
+    width: 100%;
+    border: 0;
+    background-color: #f1f1e6;
+}
+
+.order-cta {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    background-color: #0a3641;
+    color: #f1f1e6;
+    border-radius: 15px;
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    width: 100%;
+    max-width: 90%;
+    margin: auto auto 0.5em auto;
+}
+
+.order-cta:hover {
+    background-color: #3E6571;
+    color: #f1f1e6;
+}
+
+.order-cta:active {
+    background-color: #f1f1e6;
+    color: #0a3641;
+    outline: 5px solid #0a3641;
+    outline-offset: -5px;
+}
+
+/* Bottom Section */
+
+.bottom-section {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bottom-image {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -45%) scale(0.7);
+}
+
+.bottom-section:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(193, 250, 255, 0.15);
+    z-index: 99;
+}
+
+.bottom-logo {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    top: 25px;
+    z-index: 999;
+}
+
+@media (min-width: 1024px) {
+
+    .page-text {
+        font-size: 3.125em;
+    }
+
+    .shopping-cart {
+        display: grid;
+        position: relative;
+        max-width: 1556px;
+        margin: auto;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "cart input";
+    }
+
+    .cart {
+        grid-area: cart;
+    }
+
+    .input {
+        grid-area: input;
+    }
+
+    /* Cart Section */
+
+    .jacket-text,
+    .size-text,
+    .price-text {
+        font-size: 1.5em;
+    }
+
+    /* Input Section */
+
+    legend {
+        font-size: 1.5em;
+    }
+
+    .order-cta {
+        font-size: 3.125em;
+        border-radius: 30px;
+        padding: 0.2em;
+        margin: auto auto auto auto;
+    }
+
+    .order-cta:active {
+        outline: 10px solid #0a3641;
+        outline-offset: -10px;
+    }
+
+    /* Bottom Section */
+
+    .bottom-section {
+        width: 100%;
+        height: 500px;
+    }
+
+    .bottom-image {
+        transform: translate(-50%, -40%) scale(1.3);
+    }
+
+    .bottom-logo {
+        max-width: 720px;
+        top: 50px;
+    }
+
+}
