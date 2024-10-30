@@ -11,12 +11,15 @@ body {
 /* Navigation Bar */
 
 header {
+  position: sticky;
+  top:0;
   width: 100%;
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   font-size: 2.25em;
   padding: 25px;
   background: #0a3641;
   color: #f1f1e6;
+  z-index: 9999;
 }
 
 nav,
