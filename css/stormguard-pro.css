@@ -38,10 +38,6 @@ body {
     margin: auto auto;
 }
 
-.jacket-image:hover {
-    content: url(../assets/images/products/rainydays-1-2.png);
-}
-
 .name-text,
 .price-text,
 .desc-text {
@@ -105,6 +101,7 @@ body {
 .size-cta-wrapper-3,
 .size-cta-wrapper-4,
 .size-cta-wrapper-5 {
+    background-color: #f1f1e6;
     border: none;
     padding: 1em 0.5em 1em 0.5em;
 }
@@ -181,6 +178,12 @@ body {
         font-size: 3.125em;
     }
 
+    /* Product Section */
+
+    .jacket-image:hover {
+        content: url(../assets/images/products/rainydays-1-2.png);
+    }
+
     .product-section {
         max-width: 1556px;
         grid-template-columns: 55% 45%;
@@ -242,6 +245,14 @@ body {
 	.bottom-logo {
 		max-width: 720px;
 		top: 50px;
+	}
+
+}
+
+@media (min-width: 1920px) {
+
+	.bottom-image {
+		transform: translate(-50%, -25%) scale(2);
 	}
 
 }

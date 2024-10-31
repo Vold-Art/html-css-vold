@@ -23,12 +23,17 @@ body {
     display: grid;
     position: relative;
     grid-template-areas:
-		"input"
-		"address";
+        "input"
+        "address";
 }
 
 .input-section {
     grid-area: input;
+}
+
+input {
+    font-size: 1em;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 fieldset {
@@ -38,16 +43,18 @@ fieldset {
     margin: 1em auto;
     width: 80%;
     max-width: 450px;
-  }
+}
 
-  legend {
+legend {
     color: #3E6571;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 1em;
     font-weight: 600;
-  }
+}
 
-  textarea {
+textarea {
+    font-size: 1em;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     width: 100%;
     height: 350px;
     border: 0;
@@ -57,7 +64,7 @@ fieldset {
 #email {
     width: 100%;
     border: 0;
-    background-color: #f1f1e6; 
+    background-color: #f1f1e6;
 }
 
 .message-cta {
@@ -174,11 +181,19 @@ fieldset {
 
     fieldset {
         max-width: 600px;
-      }
+    }
 
     legend {
         font-size: 1.5em;
-      }
+    }
+
+    input {
+        font-size: 1.5em;
+    }
+
+    textarea {
+        font-size: 1.5em;
+    }
 
     .message-cta {
         font-size: 3.125em;
@@ -216,5 +231,13 @@ fieldset {
         max-width: 720px;
         top: 50px;
     }
+
+}
+
+@media (min-width: 1920px) {
+
+	.bottom-image {
+		transform: translate(-50%, -40%) scale(2);
+	}
 
 }

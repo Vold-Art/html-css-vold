@@ -155,7 +155,12 @@ fieldset {
     padding: 0 10px 10px;
     border: 5px solid #3E6571;
     border-radius: 15px;
-    margin: 1em;
+    margin: 0.5em;
+}
+
+input {
+    font-size: 1em;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 legend {
@@ -280,6 +285,14 @@ legend {
         font-size: 1.5em;
     }
 
+    input {
+        font-size: 1.5em;
+    }
+
+    fieldset {
+        margin: 1em;
+    }
+
     .order-cta {
         font-size: 3.125em;
         border-radius: 30px;
@@ -307,5 +320,13 @@ legend {
         max-width: 720px;
         top: 50px;
     }
+
+}
+
+@media (min-width: 1920px) {
+
+	.bottom-image {
+		transform: translate(-50%, -40%) scale(2);
+	}
 
 }

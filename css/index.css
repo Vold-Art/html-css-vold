@@ -205,6 +205,11 @@ body {
 	margin: auto auto;
 }
 
+.splash-section:hover .splash-text-1,
+.splash-section:hover .splash-text-2 {
+  color:#f1f1e6; 
+}
+
 /* Bottom Section */
 
 .bottom-section {
@@ -245,6 +250,7 @@ body {
 /* DESKTOP VIEW */
 
 @media (min-width: 1024px) {
+	
 	/* Hero Section */
 
 	.hero-section {
@@ -357,4 +363,16 @@ body {
 		max-width: 720px;
 		top: 50px;
 	}
+}
+
+@media (min-width: 1920px) {
+
+	.bottom-image {
+		transform: translate(-50%, -50%) scale(2);
+	}
+
+	.hero-image {
+		transform: translate(-50%, -50%) scale(2);
+	}
+
 }
