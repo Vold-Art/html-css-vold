@@ -8,8 +8,6 @@ This was our first project using HTML and CSS to build a web-application based o
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
 - HTML
 - CSS
 
